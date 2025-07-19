@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A* Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>A* Algorithm Visualizer</h1>
+        
+        <div class="controls">
+            <button id="startBtn">Start A*</button>
+            <button id="resetBtn" class="reset-btn">Reset Grid</button>
+            <button id="clearPathBtn">Clear Path</button>
+        </div>
+        
+        <div class="speed-control">
+            <label for="speedSlider">Speed: </label>
+            <input type="range" id="speedSlider" class="speed-slider" min="1" max="100" value="50">
+            <span id="speedValue">50ms</span>
+        </div>
+        
+        <div class="status" id="status">Click on grid to place obstacles. Green = Start, Red = Goal</div>
+        
+        <div class="grid" id="grid"></div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #4CAF50;"></div>
+                <span>Start</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #f44336;"></div>
+                <span>Goal</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #333;"></div>
+                <span>Obstacle</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #90EE90;"></div>
+                <span>Open List</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #FFB6C1;"></div>
+                <span>Closed List</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #FFD700;"></div>
+                <span>Final Path</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
